@@ -27,8 +27,8 @@ const LoginPage: React.FC = () => {
       localStorage.setItem("accessToken", data.accessToken);
       localStorage.setItem("refreshToken", data.refreshToken);
       localStorage.setItem("userName", username);
-
       navigate("/profile");
+      window.location.reload();
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError("Invalid login credentials");
